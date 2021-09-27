@@ -1,6 +1,9 @@
-var os = require('os');
-let Name = os.userInfo().username;
-console.log(Name);
+var Service = require('node-windows').Service;
+
+// Create a new service object
+const process = require('process');
+  // Printing process.env property value
+console.log(process.env.USERNAME);
 
 exports.onCreatePage = ({ page, actions }) => {
     const { createPage, deletePage } = actions
@@ -10,7 +13,7 @@ exports.onCreatePage = ({ page, actions }) => {
       ...page,
       context: {
         ...page.context,
-        loginName: Name,
+        loginName: process.env.USERNAME,
       },
     })
 }
