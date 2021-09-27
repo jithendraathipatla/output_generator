@@ -1,11 +1,15 @@
 import React from "react";
-import { useState } from "react"; 
+import { useState, useEffect } from "react"; 
 import {css} from '@emotion/react';
 
 
 const Page = ({ pageContext }) => {
   const [show, setshow] = useState(0);
   const [show1, setshow1] = useState(0);
+
+  useEffect(() =>{
+
+  });
   
 const handelFormSubmit = (event) =>{
   event.preventDefault();
@@ -13,7 +17,7 @@ const handelFormSubmit = (event) =>{
   //console.log(windowsName);
   setshow(1);
   let admin = pageContext.loginName;
-  //console.log(admin.slice(9));
+  console.log(admin.slice(9));
   {admin.slice(9) === windowsName ? setshow1(1) : setshow1(2)}
 }
   
