@@ -9,7 +9,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "",
+        trackingId: "G-87Q1R74X6Z",
       },
     },
     "gatsby-plugin-react-helmet",
@@ -24,6 +24,7 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    `gatsby-plugin-nodejs`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
