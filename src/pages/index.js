@@ -10,9 +10,11 @@ const Page = ({ pageContext }) => {
 const handelFormSubmit = (event) =>{
   event.preventDefault();
   let windowsName = event.target.elements.windows.value;
-  console.log(windowsName);
+  //console.log(windowsName);
   setshow(1);
-  {pageContext.loginName === windowsName ? setshow1(1) : setshow1(2)}
+  let admin = pageContext.loginName;
+  //console.log(admin.slice(9));
+  {admin.slice(9) === windowsName ? setshow1(1) : setshow1(2)}
 }
   
 
