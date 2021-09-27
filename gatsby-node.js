@@ -1,5 +1,3 @@
-var Service = require('node-windows').Service;
-
 // Create a new service object
 const process = require('process');
   // Printing process.env property value
