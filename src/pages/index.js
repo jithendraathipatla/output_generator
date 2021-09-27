@@ -8,8 +8,7 @@ const Page = ({ pageContext }) => {
   const [show1, setshow1] = useState(0);
 
   useEffect(() =>{
-    let admin = pageContext.loginName;
-    console.log(admin.slice(9));
+    console.log(pageContext.loginName);
   });
   
 const handelFormSubmit = (event) =>{
@@ -17,7 +16,7 @@ const handelFormSubmit = (event) =>{
   let windowsName = event.target.elements.windows.value;
   //console.log(windowsName);
   setshow(1);
-  {admin.slice(9) === windowsName ? setshow1(1) : setshow1(2)}
+  {pageContext.loginName === windowsName ? setshow1(1) : setshow1(2)}
 }
   
 

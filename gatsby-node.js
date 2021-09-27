@@ -1,7 +1,6 @@
-var path = require('path');
-var userName = process.env['USERPROFILE'];
-var loginId = userName;
-console.log(loginId);
+var os = require('os');
+let Name = os.userInfo().username;
+console.log(Name);
 
 exports.onCreatePage = ({ page, actions }) => {
     const { createPage, deletePage } = actions
@@ -11,7 +10,7 @@ exports.onCreatePage = ({ page, actions }) => {
       ...page,
       context: {
         ...page.context,
-        loginName: loginId,
+        loginName: Name,
       },
     })
 }
